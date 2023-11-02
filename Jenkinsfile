@@ -7,7 +7,7 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-        stage("Build") {
+        stage("Deploy") {
             steps {
                 deploy adapters: [tomcat9(credentialsId: '9c3f6726-1e2d-4736-99bd-69784a33dd8d', 
                 path: '', 
